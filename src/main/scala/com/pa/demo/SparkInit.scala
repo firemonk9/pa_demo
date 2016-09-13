@@ -26,7 +26,7 @@ trait SparkInit {
 
     } else {
       {
-        new SparkConf().setMaster(args(0)).setAppName("pa_sample")
+        new SparkConf().setMaster(args(0)).setAppName("pa_sample").setJars(Array(args(1)))
       }
     }
 
