@@ -12,7 +12,7 @@ object Main extends SparkInit {
 
     val local = false //if (args.length > 0 && args(0) == "true") true else false
 
-    val (sc, sqlContext) = initilizeSpark(Array(), local, None)
+    val (sc, sqlContext) = initilizeSpark(args, local, None)
 
     val rdd = sc.parallelize(1 to 100).map(a => (a, a)).map(a => {
       //      val l = new com.pa.superAlgo.AlgoImplementer()
